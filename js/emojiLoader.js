@@ -1,4 +1,4 @@
-const BASE_URL = 'https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main?v=' + Math.random();
+const BASE_URL = 'https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main?v=' + new Date().getTime();
 const emojis = {
     solzinho: 'emojis/solzinho.gif',
     notasmusicais: 'emojis/notasmusicais.gif',
