@@ -1,4 +1,4 @@
-const BASE_URL = 'https://cdn.jsdelivr.net/gh/gbbarcelos/icons@main';
+const BASE_URL = 'https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emojiLoader.js';
 const emojis = {
     coracao_rosinha: 'emojis/🤍.gif',
     borboleta: 'emojis/🦋.gif',

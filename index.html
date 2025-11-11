@@ -140,7 +140,7 @@
             <h2>📖 Como Usar</h2>
             <p>Importe o arquivo <code>emojiLoader.js</code> no seu HTML:</p>
             <div class="code-example">
-            <code>&lt;script src="https://cdn.jsdelivr.net/gh/gbbarcelosicons@main/js/emojiLoader.js"&gt;&lt;/script&gt;</code>
+            <code>"src="https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emojiLoader.js"</code>
         </div>
         <p style="margin-top: 10px;">Depois use em seu código:</p>
         <div class="code-example">
@@ -165,24 +165,24 @@
     </div>
 
     <!-- Importar emojiLoader.js -->
-    <script src="https://cdn.jsdelivr.net/gh/gbbarcelos/icons@main/js/emojiLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emojiLoader.js"></script>
 
     <script>
         // Renderizar grid de emojis
         function renderizarEmojis() {
-        const container = document.getElementById('emojiContainer');
-        const emojisDisp = listarEmojis();
+            const container = document.getElementById('emojiContainer');
+            const emojisDisp = listarEmojis();
 
-        container.innerHTML = emojisDisp
-            .map(nome => `
-            <div class="emoji-item">
-                ${carregarEmoji(nome, 48)}
-                <span class="emoji-name">${nome}</span>
-            </div>
-            `)
-            .join('');
+            container.innerHTML = emojisDisp
+                .map(nome => `
+                <div class="emoji-item">
+                    ${carregarEmoji(nome, 48)}
+                    <span class="emoji-name">${nome}</span>
+                </div>
+                `)
+                .join('');
 
-        document.getElementById('totalEmojis').textContent = emojisDisp.length;
+            document.getElementById('totalEmojis').textContent = emojisDisp.length;
         }
 
         // Exemplos de uso
@@ -194,11 +194,11 @@
             <p>Siga-nos no ${carregarEmoji('🤍', 24)} GitHub</p>
             <p>Classificação: ${carregarEmoji('🧸', 20)} ${carregarEmoji('star', 20)} ${carregarEmoji('star', 20)}</p>
         `;
-    }
+        }
 
-    // Executar ao carregar
-    renderizarEmojis();
-    mostrarExemplos();
-  </script>
+        // Executar ao carregar
+        renderizarEmojis();
+        mostrarExemplos();
+    </script>
 </body>
 </html>
