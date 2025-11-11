@@ -135,7 +135,6 @@
         <h1>🎨 Carregador de Emojis</h1>
         <p class="subtitle">Hospedado via jsDelivr + GitHub</p>
 
-        <!-- Seção: Como Usar -->
         <div class="section">
             <h2>📖 Como Usar</h2>
             <p>Importe o arquivo <code>emojiLoader.js</code> no seu HTML:</p>
@@ -148,7 +147,6 @@
         </div>
         </div>
 
-        <!-- Seção: Emojis Disponíveis -->
         <div class="section">
         <h2>😊 Emojis Disponíveis</h2>
         <div id="emojiContainer"></div>
@@ -157,18 +155,15 @@
         </div>
         </div>
 
-        <!-- Seção: Exemplo de Uso -->
         <div class="section">
         <h2>💻 Exemplo Prático</h2>
         <div id="exemploTexto" style="font-size: 18px; line-height: 1.8;"></div>
         </div>
     </div>
 
-    <!-- Importar emojiLoader.js -->
     <script src="https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emojiLoader.js"></script>
 
     <script>
-        // Renderizar grid de emojis
         function renderizarEmojis() {
             const container = document.getElementById('emojiContainer');
             const emojisDisp = listarEmojis();
@@ -185,18 +180,16 @@
             document.getElementById('totalEmojis').textContent = emojisDisp.length;
         }
 
-        // Exemplos de uso
         function mostrarExemplos() {
         const exemploTexto = document.getElementById('exemploTexto');
         exemploTexto.innerHTML = `
-            <p>Eu amo ${carregarEmoji('🌈', 24)} você!</p>
-            <p>Que dia lindo ${carregarEmoji('☕️', 24)}</p>
-            <p>Siga-nos no ${carregarEmoji('🤍', 24)} GitHub</p>
-            <p>Classificação: ${carregarEmoji('🧸', 20)} ${carregarEmoji('star', 20)}</p>
+            <p>Eu amo ${carregarEmoji('arcoiris', 24)} você!</p>
+            <p>Que dia lindo ${carregarEmoji('cafe', 24)}</p>
+            <p>Siga-nos no ${carregarEmoji('coracao_rosinha', 24)} GitHub</p>
+            <p>Classificação: ${carregarEmoji('ursinho', 20)} ${carregarEmoji('estrela', 20)}</p>
         `;
         }
 
-        // Executar ao carregar
         renderizarEmojis();
         mostrarExemplos();
     </script>
