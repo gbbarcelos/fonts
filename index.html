@@ -131,67 +131,16 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎨 Carregador de Emojis</h1>
-        <p class="subtitle">Hospedado via jsDelivr + GitHub</p>
+    <p>meu site fofo :abelha: :donut: :margarida: :notasmusicais: :nuvem: :cafe: :coracao_rosinha: :x:</p>
 
-        <div class="section">
-            <h2>📖 Como Usar</h2>
-            <p>Importe o arquivo <code>emojiLoader.js</code> no seu HTML:</p>
-            <div class="code-example">
-            <code>"src="https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emojiLoader.js"</code>
-        </div>
-        <p style="margin-top: 10px;">Depois use em seu código:</p>
-        <div class="code-example">
-            <code>carregarEmoji('🌈', 32)</code>
-        </div>
-        </div>
-
-        <div class="section">
-        <h2>😊 Emojis Disponíveis</h2>
-        <div id="emojiContainer"></div>
-        <div class="disponíveis">
-            <strong>Total disponível:</strong> <span id="totalEmojis">0</span> emojis
-        </div>
-        </div>
-
-        <div class="section">
-        <h2>💻 Exemplo Prático</h2>
-        <div id="exemploTexto" style="font-size: 18px; line-height: 1.8;"></div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emojiLoader.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/js/emoji-shortcode.js"></script>
     <script>
-        function renderizarEmojis() {
-            const container = document.getElementById('emojiContainer');
-            const emojisDisp = listarEmojis();
-
-            container.innerHTML = emojisDisp
-                .map(nome => `
-                <div class="emoji-item">
-                    ${carregarEmoji(nome, 48)}
-                    <span class="emoji-name">${nome}</span>
-                </div>
-                `)
-                .join('');
-
-            document.getElementById('totalEmojis').textContent = emojisDisp.length;
-        }
-
-        function mostrarExemplos() {
-        const exemploTexto = document.getElementById('exemploTexto');
-        exemploTexto.innerHTML = `
-            <p>Eu amo ${carregarEmoji('arcoiris', 24)} você!</p>
-            <p>Que dia lindo ${carregarEmoji('cafe', 24)}</p>
-            <p>Siga-nos no ${carregarEmoji('coracao_rosinha', 24)} GitHub</p>
-            <p>Classificação: ${carregarEmoji('ursinho', 20)} ${carregarEmoji('estrela', 20)}</p>
-        `;
-        }
-
-        renderizarEmojis();
-        mostrarExemplos();
+        document.addEventListener("DOMContentLoaded", () => {
+            EmojiShort.init({
+            base: "https://cdn.jsdelivr.net/gh/gbbarcelos/etc@main/emojis",
+            ext: ".gif"
+            });
+        });
     </script>
 </body>
 </html>
